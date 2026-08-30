@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Fruit Ninja Auto Slicer</string>
+    <string name="accessibility_service_description">Auto Slicer Accessibility Service for automated screen gestures and Fruit Ninja auto-slicing.</string>
+</resources>

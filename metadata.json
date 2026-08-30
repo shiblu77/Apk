@@ -1,0 +1,6 @@
+{
+  "name": "Fruit Ninja Auto Slicer",
+  "description": "Auto-slicing gesture tool and floating assistant for Fruit Ninja with speed controls, device lock security, and custom trajectory slicing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
