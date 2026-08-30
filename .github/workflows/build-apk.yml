@@ -45,5 +45,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: Fruit-Ninja-Auto-Slicer-APK
+          name: Fruit-Ninja-Auto-Slicer-APK-By-Shiblu
           path: app/build/outputs/apk/debug/*.apk
