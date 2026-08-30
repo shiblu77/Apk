@@ -102,13 +102,23 @@ object KeyManager {
         return context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
     }
 
+    // =========================================================================
+    // DEVELOPER CONTACT CONFIGURATION
+    // Set your WhatsApp phone number with country code (e.g., "8801700000000")
+    // =========================================================================
+    var DEVELOPER_WHATSAPP_NUMBER = "8801724727472" // 👈 এখানে আপনার কান্ট্রি কোডসহ আসল নম্বর দিন
+    var DEVELOPER_TELEGRAM_USERNAME = "shibluhasan"
+
     fun getWhatsAppIntentUrl(deviceId: String): String {
         val message = "Hello Developer Shiblu Hasan, I want to purchase the Fruit Ninja Auto Slicer Activation Key for my Device ID: $deviceId"
         val encoded = java.net.URLEncoder.encode(message, "UTF-8")
-        return "https://api.whatsapp.com/send?text=$encoded"
+        val cleanPhone = DEVELOPER_WHATSAPP_NUMBER.trim().replace("+", "").replace(" ", "").replace("-", "")
+        val phoneParam = if (cleanPhone.isNotBlank()) "phone=$cleanPhone&" else ""
+        return "https://api.whatsapp.com/send?${phoneParam}text=$encoded"
     }
 
     fun getTelegramIntentUrl(): String {
-        return "https://t.me/shibluhasan"
+        val username = DEVELOPER_TELEGRAM_USERNAME.trim().replace("@", "")
+        return if (username.isNotBlank()) "https://t.me/$username" else "https://t.me/shibluhasan"
     }
 }
